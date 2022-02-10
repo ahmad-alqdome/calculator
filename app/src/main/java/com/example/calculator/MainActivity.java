@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     Button zeroBtn , oneBtn , twoBtn ,threeBtn , fourBtn , fiveBtn ,sixBtn,sevenBtn,eightBtn , nineBtn ,
     leftBtn,rightBtn,addBtn,subBtn,multBtn,divisionBtn,backBtn,ACBtn,equalBtn;
 TextView rslt1 , finalrslt;
-    double x=0;
+    float x=0;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,7 +105,7 @@ TextView rslt1 , finalrslt;
             try {
                 String str=rslt1.getText().toString();
             x= EvaluateString.evaluate(str);
-           String str2=Double.toString(x);
+           String str2=Float.toString(x);
             finalrslt.setText(str2);
             rslt1.setText("");
         }
