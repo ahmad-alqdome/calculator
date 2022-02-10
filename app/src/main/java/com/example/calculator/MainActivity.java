@@ -1,17 +1,18 @@
 package com.example.calculator;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     Button zeroBtn , oneBtn , twoBtn ,threeBtn , fourBtn , fiveBtn ,sixBtn,sevenBtn,eightBtn , nineBtn ,
     leftBtn,rightBtn,addBtn,subBtn,multBtn,divisionBtn,backBtn,ACBtn,equalBtn;
 TextView rslt1 , finalrslt;
     double x=0;
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,126 +40,59 @@ TextView rslt1 , finalrslt;
         rslt1=findViewById(R.id.rslt1ID);
         finalrslt=findViewById(R.id.finalrsltID);
 
-        zeroBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                rslt1.append("0");
-            }    // Number  zero
-        });
+        // Number  zero
+        zeroBtn.setOnClickListener(view -> rslt1.append("0"));
 
 
-        oneBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                rslt1.append("1");
-            }    // Number One
-        });
-        twoBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                rslt1.append("2");
-            }    //Number Two
-        });
-        threeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                rslt1.append("3");
-            }   //Number Three
-        });
-        fourBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                rslt1.append("4");
-            }   // Number Four
-        });
-        fiveBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                rslt1.append("5");
-            }  //Number Five
-        });
-        sixBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                rslt1.append("6");
-            }   //Number Six
-        });
-        sevenBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                rslt1.append("7");
-            }   //Number Seven
-        });
+        // Number One
+        oneBtn.setOnClickListener(view -> rslt1.append("1"));
+        //Number Two
+        twoBtn.setOnClickListener(view -> rslt1.append("2"));
+        //Number Three
+        threeBtn.setOnClickListener(view -> rslt1.append("3"));
+        // Number Four
+        fourBtn.setOnClickListener(view -> rslt1.append("4"));
+        //Number Five
+        fiveBtn.setOnClickListener(view -> rslt1.append("5"));
+        //Number Six
+        sixBtn.setOnClickListener(view -> rslt1.append("6"));
+        //Number Seven
+        sevenBtn.setOnClickListener(view -> rslt1.append("7"));
 
-        eightBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                rslt1.append("8");
-            }    //Number Eight
-        });
+        //Number Eight
+        eightBtn.setOnClickListener(view -> rslt1.append("8"));
 
-        nineBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                rslt1.append("9");
-            }       //Number Nine
-        });
+        //Number Nine
+        nineBtn.setOnClickListener(view -> rslt1.append("9"));
 
-        addBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                rslt1.append(" + ");
-            }   // Addition
-        });
-        subBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                rslt1.append(" - ");
-            }   //Subtraction
-        });
-        multBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                rslt1.append(" × ");
-            }  //Multiple
-        });
-        divisionBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                rslt1.append(" ÷ ");
-            }  //Division
-        });
-        ACBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {                // AC on click convert  text result to empty
-                rslt1.setText("");
-                finalrslt.setText("");
-                x=0;
+        // Addition
+        addBtn.setOnClickListener(view -> rslt1.append(" + "));
+        //Subtraction
+        subBtn.setOnClickListener(view -> rslt1.append(" - "));
+        //Multiple
+        multBtn.setOnClickListener(view -> rslt1.append(" × "));
+        //Division
+        divisionBtn.setOnClickListener(view -> rslt1.append(" ÷ "));
+        ACBtn.setOnClickListener(view -> {                // AC on click convert  text result to empty
+            rslt1.setText("");
+            finalrslt.setText("");
+            x=0;
 
 
+        });
+        //backspace
+        backBtn.setOnClickListener(view -> {
+            String str = rslt1.getText().toString();
+            if (str.length() >= 1) {
+                str = str.substring(0, str.length() - 1);
+                rslt1.setText(str);
             }
         });
-        backBtn.setOnClickListener(new View.OnClickListener() {     //backspace
-            @Override
-            public void onClick(View view) {
-                String str = rslt1.getText().toString();
-                if (str.length() >= 1) {
-                    str = str.substring(0, str.length() - 1);
-                    rslt1.setText(str);
-                }
-            }
-        });
-        leftBtn.setOnClickListener(new View.OnClickListener() {   // left bracket
-            @Override
-            public void onClick(View view) {
-                rslt1.append("( ");
-            }});
+        // left bracket
+        leftBtn.setOnClickListener(view -> rslt1.append("( "));
 
-        rightBtn.setOnClickListener(new View.OnClickListener() {   // right bracket
-            @Override
-            public void onClick(View view) {
-                rslt1.append(" )");
-            }});
+        // right bracket
+        rightBtn.setOnClickListener(view -> rslt1.append(" )"));
 
 
 
@@ -167,24 +101,17 @@ TextView rslt1 , finalrslt;
         result will be sent to Class EvaluateString
 
          */
-        equalBtn.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                try {
-                EvaluateString obj = new EvaluateString();
+        equalBtn.setOnClickListener(view -> {
+            try {
                 String str=rslt1.getText().toString();
-                x= obj.evaluate(str);
-               String str2=Double.toString(x);
-                finalrslt.setText(str2);
-                rslt1.setText("");
-            }
-            catch (Exception e) {
-                    finalrslt.setText("Error");
-            }
-            }
-
-
+            x= EvaluateString.evaluate(str);
+           String str2=Double.toString(x);
+            finalrslt.setText(str2);
+            rslt1.setText("");
+        }
+        catch (Exception e) {
+                finalrslt.setText("Error");
+        }
         });
 
     }
