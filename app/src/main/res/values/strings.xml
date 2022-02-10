@@ -1,4 +1,23 @@
 <resources>
     <string name="app_name" >Calculator</string>
+    <string name="sevenNumber">7</string>
+    <string name="eghitNumber">8</string>
+    <string name="nineNumber">9</string>
+    <string name="rightBra">)</string>
+    <string name="AC">AC</string>
+    <string name="leftBra">(</string>
+    <string name="sixNumber">6</string>
+    <string name="fiveNumber">5</string>
+    <string name="fourNumber">4</string>
+    <string name="threeNumber">3</string>
+    <string name="multiSign">×</string>
+    <string name="subSign">-</string>
+    <string name="divisonSign">÷</string>
+    <string name="addSign">+</string>
+    <string name="oneNumber">1</string>
+    <string name="twoNumber">2</string>
+    <string name="zeroNumber">0</string>
+    <string name="equalSign">=</string>
+    <string name="backSign">⌫</string>
 
 </resources>
