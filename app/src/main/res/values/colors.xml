@@ -11,4 +11,5 @@
     <color name="btnTextColor">#FF9800</color>
     <color name="btnColor">#FFFFFF</color>
     <color name="colorTextNum">#000</color>
+    <color name="orange">#FF9800</color>
 </resources>
