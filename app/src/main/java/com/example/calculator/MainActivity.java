@@ -3,13 +3,18 @@ package com.example.calculator;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class MainActivity extends AppCompatActivity {
     Button zeroBtn , oneBtn , twoBtn ,threeBtn , fourBtn , fiveBtn ,sixBtn,sevenBtn,eightBtn , nineBtn ,
     leftBtn,rightBtn,addBtn,subBtn,multBtn,divisionBtn,backBtn,ACBtn,equalBtn;
+    @SuppressLint("UseSwitchCompatOrMaterialCode")
+    Switch darkModeButton;
+    ConstraintLayout body;
 TextView rslt1 , finalrslt;
     float x=0;
     @SuppressLint("SetTextI18n")
@@ -39,7 +44,8 @@ TextView rslt1 , finalrslt;
         equalBtn=findViewById(R.id.equalID);
         rslt1=findViewById(R.id.rslt1ID);
         finalrslt=findViewById(R.id.finalrsltID);
-
+        darkModeButton=findViewById(R.id.dark_mode);
+        body=findViewById(R.id.body);
         // Number  zero
         zeroBtn.setOnClickListener(view -> rslt1.append("0"));
 
@@ -113,6 +119,26 @@ TextView rslt1 , finalrslt;
                 finalrslt.setText("Error");
         }
         });
+
+        darkModeButton.setOnCheckedChangeListener((compoundButton, check) -> {
+
+            if(check)
+            {
+               rslt1.setTextColor(-1);
+
+               darkModeButton.setTextColor(-1);
+                body.setBackgroundColor(-16777216);
+            }
+            else
+            {
+                body.setBackgroundColor(-1);
+                rslt1.setTextColor(-16777216);
+                darkModeButton.setTextColor(-16777216);
+
+            }
+
+        });
+
 
     }
 }

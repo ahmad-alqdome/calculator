@@ -19,5 +19,6 @@
     <string name="zeroNumber">0</string>
     <string name="equalSign">=</string>
     <string name="backSign">⌫</string>
+    <string name="dark_mode">Dark Mode</string>
 
 </resources>
