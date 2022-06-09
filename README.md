@@ -6,4 +6,4 @@ Calculator for Android using Java
 
 ### The Application in Dark Mode 
 
-![dark mode](https://user-images.githubusercontent.com/90454407/172928175-8fa546a1-edc1-4885-ac9c-e337b09a53cc.jpg)
+<img src="https://user-images.githubusercontent.com/90454407/172928175-8fa546a1-edc1-4885-ac9c-e337b09a53cc.jpg"   width="200" height="400"/>
