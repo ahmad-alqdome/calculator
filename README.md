@@ -2,7 +2,7 @@
 Calculator for Android using Java
 
 ### The Application in Normal Mode  
-![normal mode](https://user-images.githubusercontent.com/90454407/172928090-3ce23719-b9ca-4c04-a054-8260c8641476.jpg=50*50 )
+![normal mode](https://user-images.githubusercontent.com/90454407/172928090-3ce23719-b9ca-4c04-a054-8260c8641476.jpg | width=100 )
 
 ### The Application in Dark Mode 
 
